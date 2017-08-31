@@ -1,0 +1,33 @@
+﻿html, body {
+    overflow-x: hidden;
+}
+
+.transit {
+    opacity: 0;
+    transition: transform .9s cubic-bezier(.19,1,.22,1), opacity .6s linear;
+
+    &.transit-short {
+        transition: transform .4s cubic-bezier(.19,1,.22,1), opacity .6s linear;
+    }
+
+    &.transit-top {
+        transform: translate(0, -100px);
+    }
+
+    &.transit-bottom {
+        transform: translate(0, 100px);
+    }
+
+    &.transit-left {
+        transform: translate(-25%, 0);
+    }
+
+    &.transit-right {
+        transform: translate(25%, 0);
+    }
+}
+
+.transitted {
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+}
