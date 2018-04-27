@@ -8,6 +8,7 @@
         var timingfunc = $mooth.data('timing-function') || 'cubic-bezier(0.25, 0.85, 0.5, 1)';
 
         var $wrap = $('<div></div>').insertAfter($mooth)
+        $wrap.css('height', $mooth.height() + 'px');
         $mooth.appendTo($wrap);
 
 
@@ -38,7 +39,7 @@
             }
 
             if (lastHeight != curheight || lastWidth != curWidth) {
-                $($wrap).height(curheight);
+                $wrap.css('height', curheight + 'px');
                 lastHeight = curheight;
                 lastWidth = curWidth;
             }
@@ -47,7 +48,6 @@
             $mooth[0].style.webkitTransform = transform;
             $mooth[0].style.mozTransform = transform;
             $mooth[0].style.transform = transform;
-
             tick(update)
         }
 
