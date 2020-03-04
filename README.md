@@ -10,17 +10,33 @@ You can optionally decorate your element with two `data-` attributes to affect t
 e.g.
 
 ```html
-<body>
+
   <div class="somediv" data-duration="1.2" data-timing-function="cubic-bezier(0.25, 0.85, 0.5, 1)">
     Your content
   </div>
-</body>
+
 ```
 
 
 ```javascript
-<script>
+
   $('.somediv').smoothScroll();
-</script>
+
 ```
+
+
 ---
+## [Insta](/jquery.insta/)
+Loads an Instagram feed from any public account into the target element.
+
+```html
+
+<div class="insta" data-accountid="XXX"></div>
+
+```
+
+```javascript
+
+$('.insta').insta()
+
+```
