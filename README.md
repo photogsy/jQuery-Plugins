@@ -23,15 +23,27 @@ e.g.
   $('.somediv').smoothScroll();
 
 ```
-
-
 ---
-## [Insta](/jquery.insta/)
-Loads an Instagram feed from any public account into the target element.
+
+## [Transit](/jquery.transit/)
+Adds transitions to elements; transitions fire as each element enters the viewport.
+Simply decorate your elements thus:
 
 ```html
 
-<div class="insta" data-accountid="XXX"></div>
+<div class="transit transit-bottom"></div>
+
+```
+
+---
+
+## [Insta](/jquery.insta/)
+Loads an Instagram feed from any public account into the target element.
+Specify the account Id and the number of items you want via data attributes.
+
+```html
+
+<div class="insta" data-accountid="XXX" data-count="6"></div>
 
 ```
 
