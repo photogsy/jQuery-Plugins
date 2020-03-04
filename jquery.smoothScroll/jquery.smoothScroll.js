@@ -29,6 +29,9 @@
                 window.setTimeout(callback, 1000 / 60)
             };
 
+        $(document).on('touchstart', function () {
+            $mooth.css('transition', 'none');
+        });
 
         function update() {
             var curheight = $mooth.height();
@@ -48,6 +51,7 @@
             $mooth[0].style.webkitTransform = transform;
             $mooth[0].style.mozTransform = transform;
             $mooth[0].style.transform = transform;
+
             tick(update)
         }
 
